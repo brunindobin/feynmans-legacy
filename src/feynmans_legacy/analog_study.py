@@ -94,7 +94,8 @@ def train_forecasts(history, variables, horizons, min_validation=20):
                 n_estimators=80, min_samples_leaf=5, random_state=42, n_jobs=-1
             )
             estimator.fit(train[FEATURES], train["observado"])
-            mae_model = (validation["observado"] - estimator.predict(validation[FEATURES])).abs().mean()
+            predicted = estimator.predict(validation[FEATURES])
+            mae_model = (validation["observado"] - predicted).abs().mean()
             mae_baseline = (validation["observado"] - validation["lag_0"]).abs().mean()
             method = "random_forest" if mae_model < mae_baseline else "persistencia"
             models[(variable, horizon)] = (
@@ -164,12 +165,16 @@ def recommend(values, coordinates, criteria):
     ranked = values.dropna(subset=list(criteria)).copy()
     ranked = ranked.merge(coordinates[["location_id", "latitude", "longitude"]],
                           on="location_id", how="left", validate="one_to_one")
-    ranked = ranked[ranked["latitude"].between(-90, 90) & ranked["longitude"].between(-180, 180)].copy()
+    valid_coordinates = (
+        ranked["latitude"].between(-90, 90) & ranked["longitude"].between(-180, 180)
+    )
+    ranked = ranked[valid_coordinates].copy()
     weight_sum = sum(weight for _, _, weight in criteria.values())
     ranked["nota"] = 0.0
     for variable, (target, tolerance, weight) in criteria.items():
         ranked[f"alvo_{variable}"] = target
-        ranked[f"nota_{variable}"] = 100 * (1 - (ranked[variable] - target).abs() / tolerance).clip(lower=0)
+        relative_error = (ranked[variable] - target).abs() / tolerance
+        ranked[f"nota_{variable}"] = 100 * (1 - relative_error).clip(lower=0)
         ranked[f"peso_{variable}"] = weight / weight_sum
         ranked["nota"] += ranked[f"nota_{variable}"] * weight / weight_sum
     return ranked.sort_values(["nota", "location_id"], ascending=[False, True])
