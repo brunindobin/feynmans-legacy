@@ -141,7 +141,7 @@ pyparsing==3.3.3 # Constrói analisadores sintáticos baseados em gramática de 
 
 pyproj==3.8.0 # Realiza transformações cartográficas e projeções de sistemas de coordenadas.
 
-python-dateutil==4.0.0 # Estende as funcionalidades de manipulação de datas do Python.
+python-dateutil==2.9.0.post0 # Estende as funcionalidades de manipulação de datas do Python.
 
 python-dotenv==1.2.4 # Carrega variáveis de ambiente a partir de arquivos `.env`.
 
