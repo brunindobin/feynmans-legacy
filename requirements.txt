@@ -1,0 +1,202 @@
+
+# Dependências do projeto — atualizadas e consolidadas
+
+affine==3.0.1 # Manipula transformações afins em dados matriciais e geoespaciais.
+
+annotated-types==0.8.0 # Fornece restrições de tipos reutilizáveis para validação.
+
+anyio==4.16.0 # Fornece suporte a operações assíncronas independentes de framework em Python.
+
+asttokens==3.0.2 # Anota nós de árvores de sintaxe abstrata com posições em código fonte.
+
+attrs==26.1.0 # Automatiza a criação de classes de dados com menos código repetitivo.
+
+branca==0.8.2 # Cria fragmentos e visualizações em HTML para mapas interativos.
+
+certifi==2026.10.23 # Disponibiliza um conjunto confiável de certificados raiz para requisições HTTPS.
+
+cftime==1.6.6.1 # Gerencia datas e horas baseadas em calendários climatológicos e científicos.
+
+charset-normalizer==3.5.2 # Identifica e converte a codificação de caracteres em textos.
+
+click==8.5.1 # Cria interfaces de linha de comando robustas e intuitivas.
+
+cloudpickle==3.1.2 # Serializa objetos complexos em Python para computação paralela.
+
+comm==0.2.3 # Mantém a comunicação síncrona e assíncrona entre o Jupyter e kernels.
+
+contourpy==1.4.0 # Calcula linhas de contorno para visualização gráfica de dados.
+
+cycler==0.12.1 # Gerencia sequências de estilos e cores em gráficos.
+
+debugpy==1.8.22 # Implementa o protocolo de depuração para editores e IDEs no Python.
+
+earthaccess>=0.9.0 # Facilita a busca e o acesso a dados geoespaciais e científicos da NASA.
+
+executing==2.3.0 # Rastreia e identifica a linha de código exata que está sendo executada.
+
+folium>=0.14.0 # Cria mapas interativos utilizando a biblioteca Leaflet.js.
+
+fonttools==4.68.0 # Manipula arquivos e métricas de fontes tipográficas.
+
+formulaic==1.2.2 # Converte fórmulas estatísticas em matrizes de design.
+
+geopandas==1.2.0 # Estende o pandas para manipulação de dados geoespaciais e vetoriais.
+
+h11==0.16.0 # Implementa o protocolo HTTP/1.1 de forma pura em Python.
+
+h3==4.5.0 # Implementa o sistema de indexação espacial hierárquica hexagonal da Uber.
+
+hdbscan==0.8.44 # Executa o algoritmo de agrupamento hierárquico baseado em densidade HDBSCAN.
+
+httpcore==1.0.9 # Fornece a infraestrutura central para requisições HTTP síncronas e assíncronas.
+
+httpx==0.28.1 # Oferece um cliente HTTP moderno com suporte completo a assincronicidade.
+
+idna==3.20 # Converte nomes de domínio internacionalizados para o padrão ASCII.
+
+interface-meta==2.0.1 # Gerencia metadados para interfaces orientadas a objetos.
+
+ipykernel==7.4.0 # Permite que o Jupyter execute códigos e notebooks em Python.
+
+ipython==9.18.1 # Fornece um ambiente interativo avançado para execução de Python.
+
+ipython-pygments-lexers==1.1.1 # Adiciona suporte à coloração de sintaxe específica do IPython.
+
+jedi==0.20.1 # Oferece ferramentas de autocompletar e análise estática para Python.
+
+jinja2==3.1.6 # Renderiza templates dinâmicos baseados em texto.
+
+joblib==1.6.0 # Otimiza o paralelismo e o cache em fluxos de trabalho científicos.
+
+jupyter-client==8.10.0 # Gerencia a comunicação entre o Jupyter e seus kernels de execução.
+
+jupyter-core==5.9.1 # Contém funcionalidades centrais compartilhadas entre aplicativos Jupyter.
+
+kiwisolver==1.5.1 # Resolve restrições lineares de posicionamento para gráficos.
+
+lightgbm>=4.0.0 # Implementa o algoritmo de aprendizado de máquina Gradient Boosting de alta performance.
+
+llvmlite==0.50.0 # Fornece uma interface em Python para a infraestrutura do compilador LLVM.
+
+markupsafe==3.0.4 # Escapa strings para uso seguro em templates HTML e XML.
+
+matplotlib>=3.7.0 # Gera gráficos estáticos, animados e interativos em Python.
+
+matplotlib-inline==0.2.2 # Exibe gráficos do Matplotlib diretamente integrados às células.
+
+mypy-extensions==1.2.0 # Fornece extensões experimentais de tipos para análise estática.
+
+narwhals==2.28.0 # Fornece uma camada de compatibilidade leve entre diferentes bibliotecas de DataFrames.
+
+nest-asyncio2==1.7.4 # Permite o aninhamento de loops de eventos assíncronos.
+
+netcdf4==1.7.5.1.post1 # Lê e grava arquivos de dados científicos no formato NetCDF.
+
+numba==0.68.1 # Compila funções Python em código de máquina otimizado com JIT.
+
+numpy>=1.24.0,<2.0.0 # Fornece suporte a matrizes multidimensionais e computação numérica de alta performance.
+
+nvidia-nccl-cu13==2.32.6 # Fornece primitivas de comunicação coletiva otimizadas para GPUs NVIDIA.
+
+packaging==26.3 # Gerencia e compara versões de pacotes em conformidade com PEP 440.
+
+pandas>=2.0.0 # Oferece estruturas de dados e ferramentas de análise de alta performance.
+
+pandera==0.36.0 # Realiza validação estatística e estruturada de DataFrames.
+
+parso==0.8.7 # Analisa a gramática e estrutura sintática de códigos Python.
+
+patsy==1.0.3 # Descreve modelos estatísticos usando fórmulas em estilo R.
+
+pexpect==4.9.0 # Automatiza interações com programas controlados por linha de comando.
+
+pillow==13.0.0 # Oferece recursos avançados de processamento e manipulação de imagens.
+
+platformdirs==4.14.5 # Determina caminhos padrão de diretórios do sistema operacional.
+
+plotly==7.1.0 # Cria gráficos interativos baseados em navegador web.
+
+prompt-toolkit==3.0.53 # Cria interfaces interativas avançadas baseadas em terminal.
+
+psutil==7.2.2 # Monitora o uso de recursos do sistema e processos em execução.
+
+ptyprocess==0.7.0 # Controla processos filhos em terminais virtuais PTY.
+
+pure-eval==0.2.4 # Avalia expressões de forma segura em rastreamentos de erro.
+
+pyarrow==26.0.1 # Fornece processamento de dados em memória e troca rápida no padrão Apache Arrow.
+
+pydantic==2.14.3 # Realiza validação de dados e gerenciamento de configurações usando dicas de tipo.
+
+pydantic-core==2.50.4 # Implementa o motor de validação de alta performance para o Pydantic.
+
+pygments==2.21.0 # Realiza a coloração e destaque de sintaxe para diversas linguagens.
+
+pynndescent==0.7.0 # Executa buscas aproximadas de vizinhos mais próximos em alta velocidade.
+
+pyogrio==0.13.0 # Fornece acesso vetorizado de alta performance a fontes de dados vetoriais OGR.
+
+pyparsing==3.3.3 # Constrói analisadores sintáticos baseados em gramática de expressões.
+
+pyproj==3.8.0 # Realiza transformações cartográficas e projeções de sistemas de coordenadas.
+
+python-dateutil==4.0.0 # Estende as funcionalidades de manipulação de datas do Python.
+
+python-dotenv==1.2.4 # Carrega variáveis de ambiente a partir de arquivos `.env`.
+
+pyzmq==27.3.0 # Fornece a interface em Python para a biblioteca de mensagens ZeroMQ.
+
+rasterio==1.5.2 # Lê e grava dados raster geoespaciais em Python.
+
+requests>=2.31.0 # Executa requisições HTTP síncronas de forma simples e intuitiva.
+
+rioxarray==0.23.0 # Integra o rasterio com o xarray para análise de dados raster espaciais.
+
+scikit-learn>=1.3.0 # Implementa algoritmos eficientes de aprendizado de máquina e mineração de dados.
+
+scipy>=1.10.0 # Fornece algoritmos matemáticos e científicos avançados.
+
+seaborn==0.13.2 # Cria visualizações estatísticas atraentes baseadas no Matplotlib.
+
+shapely==2.2.0 # Manipula e analisa geometrias planas e espaciais.
+
+stack-data==0.6.3 # Extrai dados detalhados de variáveis em rastreamentos de exceção.
+
+statsmodels==0.15.0 # Executa estimativas e testes estatísticos avançados.
+
+streamlit>=1.28.0 # Cria aplicativos web interativos para ciência de dados de forma simples.
+
+streamlit-folium>=0.15.0 # Integra mapas do Folium diretamente em aplicações Streamlit.
+
+threadpoolctl==3.8.0 # Controla o uso de threads em bibliotecas de computação paralela.
+
+tornado==6.6.1 # Implementa um servidor web assíncrono de alta performance.
+
+tqdm==4.70.1 # Exibe barras de progresso interativas em loops e tarefas demoradas.
+
+traitlets==5.16.1 # Adiciona tipagem, validação e observabilidade de atributos a classes.
+
+typeguard==4.6.0 # Realiza verificação de tipos em tempo de execução.
+
+typing-extensions==4.16.0 # Disponibiliza recursos avançados de tipagem estática.
+
+typing-inspect==0.9.0 # Inspeciona assinaturas e restrições de tipos em Python.
+
+typing-inspection==0.4.5 # Fornece utilitários para inspeção de anotações de tipos.
+
+tzdata==2026.6 # Fornece a base de dados de fusos horários globais (IANA).
+
+umap-learn==0.6.0 # Executa a redução de dimensionalidade UMAP para aprendizado de máquina.
+
+urllib3==2.8.0 # Gerencia conexões HTTP avançadas com suporte a pool e reuso.
+
+wcwidth==0.9.4 # Calcula a largura de caracteres Unicode impressos em terminais.
+
+wrapt==2.5.2 # Facilita a criação de decoradores avançados e wrappers em Python.
+
+xarray==2026.9.0 # Manipula arrays multidimensionais rotulados para análises científicas.
+
+xgboost==3.4.1 # Implementa a biblioteca otimizada de gradient boosting XGBoost.
+
+xyzservices==2026.9.1 # Gerencia catálogos e metadados de provedores de blocos de mapas web.

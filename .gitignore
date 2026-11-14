@@ -1,0 +1,25 @@
+## Dados e artefatos pesados (versionar via DVC/LFS ou scripts de download)
+#data/external/*
+#data/raw/*
+#data/interim/*
+#data/processed/*
+#models/*
+#!**/.gitkeep
+#!data/README.md
+#
+## Python
+#__pycache__/
+#*.pyc
+#.venv/
+#.env
+#.ipynb_checkpoints/
+#.pytest_cache/
+#.ruff_cache/
+#
+## Node (frontend)
+#node_modules/
+#dist/
+#
+## SO / editor
+#.DS_Store
+#.vscode/

@@ -1,0 +1,82 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "feynmans-legacy"
+version = "0.1.0"
+description = "Identificação de locais na Terra análogos a bases lunares permanentes e a Marte."
+readme = "README.md"
+requires-python = ">=3.12"
+
+# Faixas compatíveis (piso = versão validada). As versões EXATAS ficam em requirements.txt.
+dependencies = [
+    # Núcleo numérico e dados tabulares
+    "numpy>=2.5,<3",
+    "pandas>=3.1,<4",
+    "scipy>=1.18,<2",
+    "pyarrow>=26",
+    "joblib>=1.6",
+
+    # Machine learning, clusterização e previsão
+    "scikit-learn>=1.9,<2",
+    "statsmodels>=0.15",
+    "xgboost>=3.4,<4",
+    "lightgbm>=4.7,<5",
+    "umap-learn>=0.6",
+    "hdbscan>=0.8.44",
+
+    # Geoespacial e dados climáticos/raster
+    "geopandas>=1.2,<2",
+    "shapely>=2.2,<3",
+    "pyproj>=3.8",
+    "rasterio>=1.5",
+    "xarray>=2026.9",
+    "rioxarray>=0.23",
+    "netCDF4>=1.7",
+    "h3>=4.5,<5",
+
+    # Visualização
+    "matplotlib>=3.11,<4",
+    "seaborn>=0.13,<0.14",
+    "plotly>=7.1,<8",
+    "folium>=0.20",
+
+    # Ingestão, validação e utilidades
+    "requests>=2.34",
+    "httpx>=0.28",
+    "pandera>=0.36",
+    "pydantic>=2.14,<3",
+    "python-dotenv>=1.2",
+    "tqdm>=4.70",
+    "ipykernel>=7.4",
+]
+
+[project.optional-dependencies]
+dev = [
+    "jupyterlab>=4.6",
+    "nbstripout>=0.9",
+    "ruff>=0.17",
+    "pytest>=9.2",
+    "pre-commit>=4.7",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests"]
+extend-exclude = ["data", "models"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "N", "NPY", "PD"]
+ignore = ["PD901"]  # permite `df` como nome de variável
+
+[tool.ruff.lint.per-file-ignores]
+"notebooks/**" = ["E402", "F401", "B018"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
