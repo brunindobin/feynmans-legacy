@@ -44,6 +44,17 @@ make setup
 pre-commit install
 ```
 
+## Criação e ativação da venv
+
+```bash
+python -m venv .venv
+source .venv/Scripts/activate      # no Windows; em Linux/Mac: source .venv/bin/activate
+pip install -r requirements.txt -r requirements-dev.txt
+pip install -e .                   # instala o pacote src/feynmans_legacy
+python -m ipykernel install --user --name feynmans-legacy
+pre-commit install
+```
+
 ## Fluxo de trabalho
 
 1. **ETL:** dados brutos entram em `data/external` e `data/nasa`; os notebooks de `notebooks/00_ETL` geram os dados em `data/tratados`.

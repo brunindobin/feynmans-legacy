@@ -23,3 +23,8 @@
 ## SO / editor
 #.DS_Store
 #.vscode/
+
+# Dados de Marte (pesados): baixar/gerar conforme data/README.md
+data/marte/**
+!data/marte/README.md
+
